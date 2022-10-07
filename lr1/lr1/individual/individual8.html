@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Індивідуальне завдання №8</title>
+    <script LANGUAGE="JavaScript">
+        function FindSeason() {
+            var seasons = ['Зима', 'Весна', 'Літо', 'Осінь'];
+            var num_month = document.getElementById('number').value;
+
+            if (isNaN(num_month)) {
+                alert("Введіть число");
+                location.reload(); 
+            }
+            else {
+                if (num_month > 0 && num_month <= 12) {
+                    if(num_month == 12) {
+                        document.getElementById('season').innerHTML = "Зима";
+                    }
+                    else {
+                        var help = seasons[Math.floor(num_month/3)];
+                        document.getElementById('season').innerHTML = help;
+                    }
+                }
+                else {
+                    alert("Введіть правильне число місяця");
+                    location.reload(); 
+                }   
+            } 
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Test</h1>
+    <label>
+        Введіть число місяця:<input type='text' id="number"/><br />
+    </label>
+    <p>Пора року: <span id="season">______</span></p>
+    <button onClick="FindSeason();">Визначити пору року</button>
+</body>
+</html>

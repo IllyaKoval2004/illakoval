@@ -1,0 +1,111 @@
+body {
+    background-color: #1c1c1c;
+    font-family: Arial, sans-serif;
+  }
+  .container{
+      width: 800px;
+      height: auto;
+      margin: 0 auto;
+      margin-top: 5%;
+    margin-bottom: 5%;
+      border: 3px solid black;
+    background-color: #f7f7f7;
+  }
+  .header{
+      display: flex;
+      position: relative;
+      width: 800px;
+       height: 200px;
+       background-color: #f7f7f7;
+  }
+  .header img{
+      display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .content {
+    padding: 10px;
+    background-color: #f7f7f7;
+    margin-bottom: 30px;
+  }
+  a{
+    font-size: 20px;
+    margin: 0px auto;
+    margin-bottom: 1px;
+    background-color: white;
+  }
+  a:hover{
+    color: black;
+  }
+  .created{
+    display: block;
+    width: 300px;
+    height: 50px;
+    color: green;
+    border: 1px solid green;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+  }
+  .created:hover{
+    background: green;
+  }
+  .coming_soon{
+    display: block;
+    width: 300px;
+    height: 50px;
+    color: red;
+    border: 1px solid red;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+  }
+  .coming_soon:hover{
+    background: red;
+  }
+  .five {
+    background: #f7f7f7;
+    padding: 50px 20px 50px 100px;
+    text-align: center;
+  } 
+  .five h1 {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    color: black;
+    font-size: 2.5em;
+    font-weight: normal;
+    display: inline-block;
+    margin: 0;
+    line-height: 1;
+    padding: 8px 10px 8px 2px;
+    border-top: 4px solid;
+  }
+  .five h1:after {
+    content: ""; 
+    position: absolute;
+    width: 120%;
+    height: 4px;
+    right: 0;
+    bottom: -4px;
+    background: black;
+  }
+  .clei{
+    display: block;
+    width: 300px;
+    height: 50px;
+    color: rgb(209, 246, 0);
+    border: 1px solid rgb(209, 246, 0);
+    background: #f7f7f7;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    opacity: 0.2;
+  }
+  .clei:hover{
+    background: #f2ff00;
+    opacity: 1;
+  }

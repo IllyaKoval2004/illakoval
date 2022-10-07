@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Індивідуальне завдання №7</title>
+    <script language="JavaScript">
+        function FindBiggest() {
+            var num1 = document.getElementById('number_1').value;
+            var num2 = document.getElementById('number_2').value;
+
+            if(isNaN(num1) || isNaN(num2)) {
+                alert("Вводіть тільки числа");
+                location.reload();   
+            }
+            else {
+                if (parseInt(num1) > parseInt(num2))
+                    document.getElementById('biggest').innerHTML = num1;
+                else
+                    document.getElementById('biggest').innerHTML = num2;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Test</h1>
+    <label>
+        Число 1: <input type='text' id="number_1"/><br /><br />
+    </label>
+    <label>
+        Число 2: <input type='text' id="number_2"/><br />
+    </label>
+    <p>Найбільше: <span id="biggest"></span></p>
+    <button onclick="FindBiggest();">Визначити більше</button>
+</body>
+</html>
