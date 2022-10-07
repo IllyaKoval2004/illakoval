@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="indv1.css" />
+    <title>1)Коваль І. Ю. ПІ 19-02</title>
+    <SCRIPT LANGUAGE="JavaScript">
+        function FormSmb() {
+            alert("Дякуємо за участь в опитуванні :)");
+        }
+        function focusName() {
+            console.log("Впишіть сюди своє ім\'я");
+        }
+        function clckIce() {
+            console.log("Ви обрали морозиво");
+        }
+        function clckChoco() {
+            console.log("Ви обрали шоколад");
+        }
+    </SCRIPT>
+</head>
+<body>
+    <form class="form-example" onsubmit="FormSmb()">
+        <fieldset>
+            <legend>Опитування</legend>
+            <div class="form-example">
+                <label for="name">Введіть своє ім'я:</label>
+                <input onfocus="focusName()" type="text" name="name" id="name">
+            </div>
+            <fieldset>
+                <legend>Що вам більше подобається?:</legend>
+                <div class="form-example">
+                    <label for="preferences_ice-cream">Морозиво:</label>
+                    <input onclick="clckIce()" type="radio" name="choice" id="ice-cream">
+                </div>
+                <div class="form-example">
+                    <label for="preferences_chocolate">Шоколад:</label>
+                    <input onclick="clckChoco()" type="radio" name="choice" id="chocolate">
+                </div>
+            </fieldset>
+            <div class="form-example">
+                <input type="submit" value="Відправити">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="indv3.css" />
+    <title>3)Коваль І. Ю. ПІ 19-02</title>
+    <SCRIPT LANGUAGE="JavaScript">
+        function changeUrl1() {
+            document.img.src = "../../img/home1.png";
+        }
+        function changeUrl2() {
+            document.img2.src = "../../img/news1.png";
+        }
+        function changeUrl3() {
+            document.img3.src = "../../img/contact1.png";
+        }
+        function changeUrl4() {
+            document.img4.src = "../../img/about1.png";
+        }
+        function changeUrlback1() {
+            document.img.src = "../../img/home.png";
+        }
+        function changeUrlback2() {
+            document.img2.src = "../../img/news.png";
+        }
+        function changeUrlback3() {
+            document.img3.src = "../../img/contact.png";
+        }
+        function changeUrlback4() {
+            document.img4.src = "../../img/about.png";
+        }
+    </SCRIPT>
+</head>
+<body>
+    <div class="container">
+        <a href="#home"><img name="img" onMouseOver="changeUrl1()" onMouseOut ="changeUrlback1()" src="../../img/home.png" alt="home"></a>
+        <a href="#news"><img name="img2" onMouseOver="changeUrl2()" onMouseOut ="changeUrlback2()" src="../../img/news.png" alt="news"></a>
+        <a href="#contact"><img name="img3" onMouseOver="changeUrl3()" onMouseOut ="changeUrlback3()" src="../../img/contact.png" alt="contact"></a>
+        <a href="#about"><img name="img4" onMouseOver="changeUrl4()" onMouseOut ="changeUrlback4()" src="../../img/about.png" alt="about"></a>
+    </div>
+</body>
+</html>

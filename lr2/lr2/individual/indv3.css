@@ -1,0 +1,11 @@
+img {
+    width: 72px;
+    height: 72px;
+}
+
+.container {
+    left: 40%;
+    position: absolute;
+    width: auto;
+    border: solid rgb(41, 135, 185);
+}
