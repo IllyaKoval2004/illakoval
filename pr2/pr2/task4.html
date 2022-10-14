@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-image: url(https://look.com.ua/pic/201209/1920x1080/look.com.ua-19472.jpg);
+            color: azure;
+        }
+        .content-wrapper {
+            position: relative;
+            margin: 200px auto;
+            padding: 20px;
+            padding-bottom: 60px;
+            width: 500px;
+            height: auto;
+            background-image: url(https://img.freepik.com/premium-photo/money-background_196038-851.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+        .content-wrapper:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2;
+        }
+        .content {
+            position: relative;
+            z-index: 3;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            padding: 5px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        input {
+            display: flex;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            font-size: 14px;
+            padding: 3px;
+            border: 2px solid rgb(42, 183, 7);
+        }
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+        .submit {
+            display: flex;
+            font-size: 14px;
+            padding: 5px 15px 5px 15px;
+            border-radius: 25px;
+            margin: 5px auto;
+            color: white;
+            border-color: rgb(42, 183, 7);
+            background: linear-gradient(rgb(42, 183, 7), rgb(5, 84, 21));
+            font-family: inherit;
+        }
+        .submit:hover {
+            color: rgb(42, 183, 7);
+            border-color: white;
+            background: white;
+            cursor: pointer;
+        }
+    </style>
+    <title>Коваль І. ПІ 19-02</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="content">
+            <h1>Завдання №4</h1>
+            <h2>Ставки на бокс 1xBad</h2>
+            <p>Ваша ставка:</p>
+            <input type='number' id="money"/>
+            <input type='text' id="output" readonly/>
+            <button class="submit" onClick="Clicked()">Підтвердити</button>
+            <script language="JavaScript" src="js/task4.js"></script>
+        </div>
+    </div>
+</body>
+</html> 
