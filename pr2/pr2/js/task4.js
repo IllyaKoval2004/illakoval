@@ -9,11 +9,16 @@ function Clicked_time() {
     let money = document.getElementById('money').value;
     let output = document.querySelector('#output');
     let num = getRandomInt(-5, 5);
-    if (num <= 0) {
-        output.value = "Ви програли";
+    if (money <= 0) {
+        output.value = "А де гроші?";
     }
     else {
-        output.value = "Ви виграли " + money * num + " грн.";
+        if (num <= 0) {
+            output.value = "Ви програли";
+        }
+        else {
+            output.value = "Ви виграли " + money * num + " грн.";
+        }
     }
 }
 
