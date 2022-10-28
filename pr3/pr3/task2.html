@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            width: 480px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .carousel {
+            position: relative;
+            width: 398px;
+            padding: 10px 40px;
+            border: 1px solid #CCC;
+            border-radius: 15px;
+            background: #eee;
+        }
+        .carousel img {
+            width: 130px;
+            height: 130px;
+            display: block;
+        }
+        .arrow {
+            position: absolute;
+            top: 60px;
+            padding: 0;
+            background: #ddd;
+            border-radius: 15px;
+            border: 1px solid gray;
+            font-size: 24px;
+            line-height: 24px;
+            color: #444;
+            display: block;
+        }
+        .arrow:focus {
+            outline: none;
+        }
+        .arrow:hover {
+            background: #ccc;
+            cursor: pointer;
+        }
+        .prev {
+            left: 7px;
+        }
+        .next {
+            right: 7px;
+        }
+        .gallery {
+            width: 390px;
+            overflow: hidden;
+        }
+        .gallery ul {
+            height: 130px;
+            width: 9999px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            transition: margin-left 250ms;
+            font-size: 0;
+        }
+        .gallery li {
+            display: inline-block;
+        }
+    </style>
+    <title>Коваль І. ПІ 19-02</title>
+</head>
+<body id="body">
+    <div id="carousel" class="carousel">
+        <button class="arrow prev">⇦</button>
+        <div class="gallery">
+            <ul>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+                <li><img src="../../img/crying.jpg"></li>
+            </ul>
+        </div>
+        <button class="arrow next">⇨</button>
+    </div>
+    <script language="JavaScript" src="js/task2.js"></script>
+</body>
+</html>
