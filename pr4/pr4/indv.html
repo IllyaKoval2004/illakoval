@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <style type="text/css">
+        h1 {
+            text-align: center;
+        }
+        #map { 
+            height: 300px;
+            width: 600px; 
+        }
+    </style>
+    <title>Коваль І. ПІ 19-02</title>
+</head>
+<body id="body">
+    <form>
+        <input type="button" id="watch" value="Watch me">
+        <input type="button" id="clearWatch" value="Clear watch">
+    </form>
+    <div id ="location">
+        Your location will go here.
+    </div>
+    <div id="distance">
+        Distance from College will go here.
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script language="JavaScript" src="js/indv.js"></script>
+</body>
+</html>
