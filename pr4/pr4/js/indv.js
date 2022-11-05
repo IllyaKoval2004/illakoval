@@ -5,8 +5,13 @@ document.body.insertBefore(title, body.children[0]);
 let watchId = null;
 
 let ourCoords = {
-    latitude: 48.94321, 
-    longitude: 24.73380
+    latitude: 48.94, 
+    longitude: 24.73 
+};
+
+let myCoords = {
+    latitude: 0, 
+    longitude: 0
 };
 
 window.onload=getMyLocation;
@@ -22,13 +27,24 @@ function getMyLocation(){
         alert("Oops, no geolocation support");
     }
 }
-function displayLocation (position){
+
+var rounded = function(number){
+    return +number.toFixed(2);
+}
+
+function displayLocation(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     let div = document.getElementById("location");
-    div.innerHTML = `You are at Latitude: ${latitude} Longitude: ${longitude}`;
+    div.innerHTML = `You are at Latitude: ${latitude}, Longitude: ${longitude}`;
+    div.innerHTML += ` (with ${position.coords.accuracy} meters accuracy)`;
+    let km = computeDistance(position.coords, ourCoords);
+    let distance = document.getElementById("distance");
+    distance.innerHTML = `You are ${km} km from the College`;
+    myCoords.latitude = rounded(latitude);
+    myCoords.longitude = rounded(longitude);
+    Marker(myCoords.latitude , myCoords.longitude); 
 }
-
 
 function displayError(error) {
     let errorTypes = {
@@ -60,17 +76,6 @@ function degreesToRadians(degrees) {
     return radians;
 }
 
-function displayLocation(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    let div = document.getElementById("location");
-    div.innerHTML = `You are at Latitude: ${latitude}, Longitude: ${longitude}`;
-    div.innerHTML += ` (with ${position.coords.accuracy} meters accuracy)`;
-    let km = computeDistance(position.coords, ourCoords);
-    let distance = document.getElementById("distance");
-    distance.innerHTML = `You are ${km} km from the College`; 
-}
-
 function watchLocation() {
     watchId = navigator.geolocation.watchPosition(displayLocation, displayError);
 }
@@ -83,24 +88,24 @@ function clearWatch() {
 }
 
 
-var map = L.map('map').setView([51.505, -0.09], 13);
+var map = L.map('map').setView([ourCoords.latitude, ourCoords.longitude], 12);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var marker = L.marker([51.5, -0.09]).addTo(map);
 
-marker.bindPopup("string").openPopup();
-
-var popup = L.popup();
-
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
+function Marker(latitude, longitude) {
+    let marker = L.marker([latitude, longitude]).addTo(map);
+    marker.bindPopup("Your are here:" + [latitude, longitude].toString()).openPopup();
 }
 
-map.on('click', onMapClick);
+var circle = L.circle([ourCoords.latitude, ourCoords.longitude], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 80
+}).addTo(map);
+
+circle.bindPopup("College is here:" + [ourCoords.latitude, ourCoords.longitude].toString()).openPopup();
