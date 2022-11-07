@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коваль І. ПІ 19-02</title>
+    <style type="text/css">
+        #block {
+            width: 100px;
+            height: 100px;
+            background: green;
+            border-radius: 0px 0px 0px 0px;
+        }
+        #tabs .tab {
+            display: inline-block;
+            padding: 5px 10px;
+            cursor: pointer;
+            position: relative;
+            z-index: 5;
+        }
+        #tabs .whiteborder {
+            border: 1px solid #707070;
+            border-bottom: 1px solid #fff;
+            border-radius: 3px 3px 0 0;
+        }
+        #tabs .tabContent {
+            width: 600px;
+            height: auto;
+            border: 1px solid #707070;
+            position: relative;
+            top: -1px;
+            z-index: 1;
+            padding: 10px;
+            border-radius: 0 0 3px 3px;
+        }
+        #tabs .hide {
+            display: none;
+        }
+        #tabs .show {
+            display: block;
+        }
+        label {
+            margin-right: 10px;
+        }
+        input {
+            margin-left: 20px;
+        }
+        #output {
+            width: 250px;
+            height: 25px;
+            float: right;
+            margin: 50px;
+            margin-right: 30%;
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="tabs">
+        <div class="tab whiteborder">border-radius</div>
+            <div class="tab">list-style-position</div>
+            <div class="tab">list-style-type</div>
+            <div class="tabContent">
+                <div><label>Верхній лівий радіус:</label>
+                    <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="ttl" value="0">
+                </div>
+                <div><label>Верхній правий радіус:</label>
+                    <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="ttr" value="0">
+                </div>
+                <div><label>Нижній правий радіус:</label>
+                    <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="tbr" value="0">
+                </div>
+                <div><label>Нижній лівий радіус:</label>
+                    <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="tbl" value="0">
+                </div>
+                <input type="text" id="output" value="Код CSS" readonly>
+                <div id="block"></div>
+            </div>
+            <div class="tabContent">Друга вкладка</div>
+            <div class="tabContent">Третя вкладка</div>
+        </div>
+    <script language="JavaScript" src="js/task2.js"></script>
+</body>
+</html>

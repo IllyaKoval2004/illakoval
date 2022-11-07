@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коваль І. ПІ 19-02</title>
+    <style type="text/css">
+        #tabs .tab {
+            display: inline-block;
+            padding: 5px 10px;
+            cursor: pointer;
+            position: relative;
+            z-index: 5;
+        }
+        #tabs .whiteborder {
+            border: 1px solid #707070;
+            border-bottom: 1px solid #fff;
+            border-radius: 3px 3px 0 0;
+        }
+        #tabs .tabContent {
+            width: 300px;
+            height: 60px;
+            border: 1px solid #707070;
+            position: relative;
+            top: -1px;
+            z-index: 1;
+            padding: 10px;
+            border-radius: 0 0 3px 3px;
+        }
+        #tabs .hide {
+            display: none;
+        }
+        #tabs .show {
+            display: block;
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="tabs">
+        <div class="tab whiteborder">Tab 1</div>
+        <div class="tab">Tab 2</div>
+        <div class="tab">Tab 3</div>
+        <div class="tabContent">Перша вкладка</div>
+        <div class="tabContent">Друга вкладка</div>
+        <div class="tabContent">Третя вкладка</div>
+    </div>
+    <script language="JavaScript" src="js/task1.js"></script>
+</body>
+</html>
