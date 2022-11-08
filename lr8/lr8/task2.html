@@ -26,6 +26,7 @@
         }
         #tabs .tabContent {
             width: 600px;
+            display: block;
             height: auto;
             border: 1px solid #707070;
             position: relative;
@@ -43,15 +44,39 @@
         label {
             margin-right: 10px;
         }
-        input {
-            margin-left: 20px;
-        }
         #output {
             width: 250px;
             height: 25px;
             float: right;
             margin: 50px;
             margin-right: 30%;
+        }
+        #output3 {
+            width: 250px;
+            height: 25px;
+            margin-bottom: 10px;
+            margin-left: 30%;
+        }
+        .line {
+            display: block;
+            margin-bottom: 20px;
+        }
+        .stretch {
+            display: flex;
+            align-items: stretch;
+        }
+        label {
+            width: 180px;
+        }
+        .range {
+            width: 160px;
+        }
+        .text {
+            margin-left: 25px;
+            width: 200px;
+        }
+        #list-tab3 {
+            list-style-type: none;
         }
     </style>
 </head>
@@ -61,27 +86,69 @@
             <div class="tab">list-style-position</div>
             <div class="tab">list-style-type</div>
             <div class="tabContent">
-                <div><label>Верхній лівий радіус:</label>
-                    <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
-                    <input type="text" id="ttl" value="0">
+                <div class="line">
+                    <div class="stretch">
+                        <label>Верхній лівий радіус:</label>
+                        <input class="range" type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+                        <input class="text" type="text" id="ttl" value="0" oninput="generate_input()">
+                    </div>
                 </div>
-                <div><label>Верхній правий радіус:</label>
-                    <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
-                    <input type="text" id="ttr" value="0">
+                <div class="line">
+                    <div class="stretch">
+                        <label>Верхній правий радіус:</label>
+                        <input class="range" type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+                        <input class="text" type="text" id="ttr" value="0" oninput="generate_input()">
+                    </div>
                 </div>
-                <div><label>Нижній правий радіус:</label>
-                    <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
-                    <input type="text" id="tbr" value="0">
+                <div class="line">
+                    <div class="stretch">
+                        <label>Нижній правий радіус:</label>
+                        <input class="range" type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+                        <input class="text" type="text" id="tbr" value="0" oninput="generate_input()">
+                    </div>
                 </div>
-                <div><label>Нижній лівий радіус:</label>
-                    <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
-                    <input type="text" id="tbl" value="0">
+                <div class="line">
+                    <div class="stretch">
+                        <label>Нижній лівий радіус:</label>
+                        <input class="range" type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+                        <input class="text" type="text" id="tbl" value="0" oninput="generate_input()">
+                    </div>
                 </div>
                 <input type="text" id="output" value="Код CSS" readonly>
                 <div id="block"></div>
             </div>
-            <div class="tabContent">Друга вкладка</div>
-            <div class="tabContent">Третя вкладка</div>
+            <div class="tabContent">
+                <div class="list">
+                    <div class="line">
+                        <label>Позиція списку:</label>
+                        <input class="range" type="range" id="position_list" min="0" max="1" value="0" oninput="generate2()">
+                        <input class="text" type="text" id="position_text" value="none" oninput="generate_input2()">
+                        <div class="list">
+                            <ul id="list-tab2">
+                                <li>List item</li>
+                                <li>List item</li>
+                                <li>List item</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" id="output2" value="Код CSS" readonly>
+            </div>
+            <div class="tabContent">
+                <div class="line">
+                    <label>Cтиль списку:</label>
+                    <input class="range" type="range" id="style_list" min="0" max="20" value="0" oninput="generate3()">
+                    <input class="text" type="text" id="style_text" value="none" oninput="generate_input3()">
+                    <div class="list">
+                        <ul id="list-tab3">
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                        </ul>
+                    </div>
+                </div>
+                <input type="text" id="output3" value="Код CSS" readonly>
+            </div>
         </div>
     <script language="JavaScript" src="js/task2.js"></script>
 </body>
