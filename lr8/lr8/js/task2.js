@@ -93,9 +93,8 @@ function generate2 () {
     }
 }
 function generate_input2 () {
-    //style_text = document.getElementById('style_text');
-    //workList(style_text.value);
-    alert("dadad");
+    position_text = document.getElementById('position_text');
+    workList2(position_text.value);
 }
 
 var style_list;
