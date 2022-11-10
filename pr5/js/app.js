@@ -31,7 +31,7 @@ function funonload() {
 		let display = document.getElementById('li' + i);
 		if(localStorage.getItem("display" + i) != "") {
 			display.className = ("" + localStorage.getItem("display" + i));
-			if(localStorage.getItem("display" + i) == "checked") {
+			if(localStorage.getItem("display" + i) == "checked" || localStorage.getItem("display" + i) == "null checked") {
 				check_task[i].classList.add("invis");
 			}
 		}
