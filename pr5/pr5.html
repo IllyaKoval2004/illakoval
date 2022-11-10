@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="image/png" sizes="16x16" rel="icon" href="../img/icons8-github-16.png">
+	<title>Практична робота №5</title>
+	<style>
+		body {
+			margin: 0;
+			min-width: 250px;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		h2 { 
+			margin: 5px;
+			cursor: pointer;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul li {
+			position: relative;
+			padding: 12px 8px 12px 0px;
+			list-style-type: none;
+			list-style-position: inside;
+			background: #2c09b9;
+			font-size: 18px;
+			margin-top: 10px;
+			color: #fff;
+			transition: 1s;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		ul li:hover {
+			border-radius: 0px 100px 0px 100px;
+		}
+
+		.checked {
+			background: rgb(225, 225, 225);
+			color: rgb(120, 119, 119);
+			border-radius: 100px 0px 100px 0px;
+			text-decoration: line-through;
+		}
+
+		.checked:hover {
+			border-radius: 100px 0px 100px 0px;
+		}
+
+		.close {
+			position: absolute;
+			cursor: pointer;
+			right: 0;
+			top: 0;
+			padding: 12px 16px 12px 16px;
+			font-size: 20px;
+		}
+
+		.close:hover {
+			color: rgb(255, 0, 0);
+		}
+
+		.header {
+			background-color: #2c09b9;
+			padding: 30px 40px;
+			color: white;
+			text-align: center;
+		}
+
+		.header:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		#myInput {
+			margin: 0;
+			border: none;
+			border-radius: 0;
+			width: 75%;
+			padding: 10px;
+			float: left;
+			font-size: 16px;
+			border-radius: 0px 100px 0px 50px;
+		}
+
+		#Sort {
+			margin: 0;
+			margin-top: 10px;
+			border: none;
+			border-radius: 0;
+			width: 75%;
+			padding: 10px;
+			float: left;
+			font-size: 16px;
+			border-radius: 50px 0px 100px 0px;
+		}
+
+		.addBtn {
+			padding: 10px;
+			width: 25%;
+			background: #a814f3;
+			color: rgb(255, 255, 255);
+			float: left;
+			text-align: center;
+			font-size: 16px;
+			cursor: pointer;
+			transition: 0.3s;
+			border-radius: 100px 50px 0px 0px;
+		}
+
+		.sortBtn {
+			padding: 10px;
+			width: 25%;
+			background: #a814f3;
+			color: rgb(255, 255, 255);
+			float: left;
+			text-align: center;
+			font-size: 16px;
+			cursor: pointer;
+			margin-top: 10px;
+			transition: 0.3s;
+			border-radius: 0px 0px 50px 100px;
+		}
+
+		.addBtn:hover, .sortBtn:hover {
+			background-color: #09c5d6;
+		}
+
+		.wrapper {
+			width: 800px;
+			height: auto;
+			margin: 0 auto;
+			margin-top: 10%;
+			margin-bottom: 10%;
+		}
+
+		#check_task {
+			margin: 0px 20px 0px 20px;
+			cursor: pointer;
+		}
+
+		.invis {
+			opacity: 0;
+		}
+
+		.none {
+			display: none;
+		}
+
+		.edit {
+			background-color: #2c09b9;
+			border: 0;
+			color: #fff;
+			font-size: 16px;
+			background-image: url('../img/edit.png');
+			background-position: 0px 0px;
+			background-repeat: no-repeat;
+			background-size: 20px;
+			padding-left: 20px;
+		}
+
+		.edit::placeholder{
+			color: #fff;
+		}
+
+		.time {
+			float: right;
+			font-size: 10px;
+			opacity: .8;
+			padding: 5px 30px 0px 0px; 
+			margin: 0;
+		}
+  	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="myDIV" class="header">
+			<h2 data-toggle="tooltip" data-placement="bottom" title="Один клік - очистисти сховище. Два кліки - додаткове збереження">To Do List</h2>
+			<input type="text" id="myInput" placeholder="Add task">
+			<span onclick="newElement()" class="addBtn">Add</span>
+			<input type="text" id="Sort" placeholder="Click the &quot;Sort&quot; button">
+			<span onclick="sortElements()" class="sortBtn">Sort</span>
+		</div>
+		<ul id="myUL">
+			<li id="li0"><input type="checkbox" id="check_task"><label id="label0">Css оформлення</label><p id="time0" class="time">10.11.22 10:15</p></li>
+			<li id="li1"><input type="checkbox" id="check_task"><label id="label1">Елемент input</label><p id="time1" class="time">10.11.22 10:16</p></li>
+			<li id="li2"><input type="checkbox" id="check_task"><label id="label2">Дата та час додавання</label><p id="time2" class="time">10.11.22 10:18</p></li>
+			<li id="li3"><input type="checkbox" id="check_task"><label id="label3">Сheckbox</label><p id="time3" class="time">10.11.22 10:18</p></li>
+			<li id="li4"><input type="checkbox" id="check_task"><label id="label4">Хрестик для видалення</label><p id="time4" class="time">10.11.22 10:19</p></li>
+			<li id="li5"><input type="checkbox" id="check_task"><label id="label5">Редагування</label><p id="time5" class="time">10.11.22 10:19</p></li>
+		</ul>
+	</div>
+    <script language="JavaScript" src="js/app.js"></script>
+</body>
+</html>
