@@ -6,7 +6,7 @@ h2.addEventListener('dblclick', () => {
 	Storage();
 });
 
-var num = 6;
+var num = 0;
 
 function funonload() {
 	if(localStorage.getItem("num") != null) {
@@ -61,18 +61,6 @@ myInput.addEventListener('keypress', (e) => {
 		newElement();
 	}
 });
-
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  	var span = document.createElement("SPAN");
-	var txt = document.createTextNode("\u00D7");
-	span.className = "close";
-	span.appendChild(txt);
-	myNodelist[i].appendChild(span);
-}
-
-Close();
 
 function Close() {
 	var close = document.getElementsByClassName("close");
@@ -137,12 +125,36 @@ function Checkbox_dblclick() {
 						if(edit.value != "") {
 							label.innerHTML = edit.value;
 							edit.classList.add("none");
-							label.classList.remove("none");
+							label.className = "null";
 							help = 0;
+							Storage();
+							body.removeEventListener('click', Body);
 						}
 						else {
 							alert("Please write something")
-}}});}});}}
+						}
+					}
+				});
+				body.addEventListener('click', Body);
+				function Body(e) {
+					if(e.target != edit) {
+						if(edit.value != "") {
+							label.innerHTML = edit.value;
+							edit.classList.add("none");
+							label.className = "null";
+							help = 0;
+							Storage();
+							body.removeEventListener('click', Body);
+						}
+						else {
+							alert("Please write something")
+						}
+					}
+				}
+			}
+		});
+	}
+}
 
 Checkbox_dblclick();
 Checkbox_check();
@@ -229,6 +241,7 @@ function sortElements() {
 			}
 		}
 		Close();
+		Checkbox_dblclick(); 
 		toggle++;
 		
 	}
@@ -245,7 +258,8 @@ function sortElements() {
 				element[i].style.display = "none";
 			}
 		}
-		Close(); 
+		Close();
+		Checkbox_dblclick();  
 		toggle++;
 	}
 	else {
@@ -256,7 +270,8 @@ function sortElements() {
 				element[i].style.display = "block";
 			}
 		}
-		Close(); 
+		Close();
+		Checkbox_dblclick(); 
 		toggle++;
 	}
 }

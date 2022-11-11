@@ -141,8 +141,8 @@
 			width: 800px;
 			height: auto;
 			margin: 0 auto;
-			margin-top: 10%;
-			margin-bottom: 10%;
+			padding-top: 10%;
+			padding-bottom: 10%;
 		}
 
 		#check_task {
@@ -184,7 +184,7 @@
 		}
   	</style>
 </head>
-<body>
+<body id="body">
 	<div class="wrapper">
 		<div id="myDIV" class="header">
 			<h2 data-toggle="tooltip" data-placement="bottom" title="Один клік - очистисти сховище. Два кліки - додаткове збереження">To Do List</h2>
@@ -194,12 +194,6 @@
 			<span onclick="sortElements()" class="sortBtn">Sort</span>
 		</div>
 		<ul id="myUL">
-			<li id="li0"><input type="checkbox" id="check_task"><label id="label0">Css оформлення</label><p id="time0" class="time">10.11.22 10:15</p></li>
-			<li id="li1"><input type="checkbox" id="check_task"><label id="label1">Елемент input</label><p id="time1" class="time">10.11.22 10:16</p></li>
-			<li id="li2"><input type="checkbox" id="check_task"><label id="label2">Дата та час додавання</label><p id="time2" class="time">10.11.22 10:18</p></li>
-			<li id="li3"><input type="checkbox" id="check_task"><label id="label3">Сheckbox</label><p id="time3" class="time">10.11.22 10:18</p></li>
-			<li id="li4"><input type="checkbox" id="check_task"><label id="label4">Хрестик для видалення</label><p id="time4" class="time">10.11.22 10:19</p></li>
-			<li id="li5"><input type="checkbox" id="check_task"><label id="label5">Редагування</label><p id="time5" class="time">10.11.22 10:19</p></li>
 		</ul>
 	</div>
     <script language="JavaScript" src="js/app.js"></script>
