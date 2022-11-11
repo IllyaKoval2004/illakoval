@@ -56,6 +56,12 @@ function Storage_remove() {
 	localStorage.removeItem("num");
 }
 
+myInput.addEventListener('keypress', (e) => { 
+	if (e.which == 13) {
+		newElement();
+	}
+});
+
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -70,9 +76,11 @@ var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
 	close[i].onclick = function() {
-		var div = this.parentElement;
-		div.classList.add("none");	
-		Storage();
+		if(confirm("Are you sure you want to delete?")) {
+			var div = this.parentElement;
+			div.classList.add("none");	
+			Storage();
+		}
 	}
 }
 
@@ -163,9 +171,11 @@ function Available_Element(date, l_text, num) {
 	li.appendChild(span);
 	for (i = 0; i < close.length; i++) {
 		close[i].onclick = function() {
-			let div = this.parentElement;
-			div.classList.add("none");
-			Storage();
+			if(confirm("Are you sure you want to delete?")) {
+				let div = this.parentElement;
+				div.classList.add("none");
+				Storage();
+			}
 		}
 	}
 	Checkbox_check();
@@ -205,10 +215,15 @@ function newElement() {
 		li.appendChild(span);
 		for (i = 0; i < close.length; i++) {
 			close[i].onclick = function() {
-				let div = this.parentElement;
-				div.classList.add("none");
-				Storage();
+				if(confirm("Are you sure you want to delete?")) {
+					let div = this.parentElement;
+					div.classList.add("none");
+					Storage();
+			
+				}
+		
 			}
+	
 		}
 	}
 	Storage();
@@ -220,45 +235,35 @@ let toggle = 3;
 function sortElements() {
 	let output_text = document.getElementById("Sort");
 	if (toggle % 3 == 0) {
-		output_text.value = "Finished tasks first";
-		toggle++;
-		for (let i = 0; i < Mas_li.length; i++) {
-			console.log("Щось: " + Mas_li[i]);
-			/*let li = document.getElementById("li" + Mas_li[i]);
-			let li_new = document.createElement("li");
-			li_new.id = li.id;
-			var checkbox = document.createElement("input");
-			checkbox.type = "checkbox";
-			checkbox.id = "check_task";
-			var label_new = document.createElement("label");
-			label_new.id = "label" + Mas_li[i];
-			var label = document.getElementById("label" + Mas_li[i]);
-			label_new.innerHTML = label.innerHTML;
-			li_new.appendChild(checkbox);
-			li_new.appendChild(label_new);
-			checkbox.classList.add("invis");
-			var span = document.createElement("SPAN");
-			var txt = document.createTextNode("\u00D7");
-			span.className = "close";
-			span.appendChild(txt);
-			li_new.appendChild(span);
-			li_new.classList.add("checked");
-			for (i = 0; i < close.length; i++) {
-				close[i].onclick = function() {
-					var div = this.parentElement;
-					div.style.display = "none";
-				}
+		output_text.value = "Finished tasks";
+		let element = document.querySelectorAll('li');
+		for (let i = 0; i < element.length; i++) {
+			if(element[i].className == "null" || element[i].className == "") {
+				element[i].style.display = "none";
 			}
-			document.getElementById("myUL").appendChild(li_new);
-			li.classList.add("none");*/
 		}
+		toggle++;
+		
 	}
 	else if (toggle % 3 == 1) {
-		output_text.value = "Unfinished tasks first"; 
+		output_text.value = "Unfinished tasks";
+		let element = document.querySelectorAll('li');
+		for (let i = 0; i < element.length; i++) {
+			element[i].style.display = "block";
+		} 
+		for (let i = 0; i < element.length; i++) {
+			if(element[i].className == "checked" || element[i].className == "null checked") {
+				element[i].style.display = "none";
+			}
+		} 
 		toggle++;
 	}
 	else {
-		output_text.value = "Without sorting"; 
+		output_text.value = "Without sorting";
+		let element = document.querySelectorAll('li');
+		for (let i = 0; i < element.length; i++) {
+			element[i].style.display = "block";
+		} 
 		toggle++;
 	}
 }
