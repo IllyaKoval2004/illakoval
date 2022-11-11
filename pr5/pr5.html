@@ -160,7 +160,8 @@
 
 		.edit {
 			background-color: #2c09b9;
-			border: 0;
+			border: 1px;
+			border-style: dashed;
 			color: #fff;
 			font-size: 16px;
 			background-image: url('../img/edit.png');
@@ -189,7 +190,7 @@
 			<h2 data-toggle="tooltip" data-placement="bottom" title="Один клік - очистисти сховище. Два кліки - додаткове збереження">To Do List</h2>
 			<input type="text" id="myInput" placeholder="Add task">
 			<span onclick="newElement()" class="addBtn">Add</span>
-			<input type="text" id="Sort" placeholder="Click the &quot;Sort&quot; button">
+			<input type="text" id="Sort" placeholder="Click the &quot;Sort&quot; button" readonly>
 			<span onclick="sortElements()" class="sortBtn">Sort</span>
 		</div>
 		<ul id="myUL">
