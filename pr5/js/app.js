@@ -84,17 +84,12 @@ for (i = 0; i < close.length; i++) {
 	}
 }
 
-var Mas_li = [-1];
-var n = 0;
-
 function Checkbox_check() {
 	var button = document.querySelectorAll('#check_task');
 	for (let i = 0; i < button.length; i++) {
 		button[i].addEventListener('click', () => {
 			button[i].classList.add("invis");
 			document.getElementById("li" + i).className = "checked";
-			Mas_li[n] = i;
-			n++;
 			Storage();
 		});
 	}
