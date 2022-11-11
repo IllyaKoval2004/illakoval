@@ -12,7 +12,6 @@ function funonload() {
 	if(localStorage.getItem("num") != null) {
 		num = parseInt(localStorage.getItem("num"));
 	}
-
 	for (let i = 0; i < num; i++) {
 		let li;
 		if(li = document.getElementById('li' + i)) {
@@ -25,26 +24,14 @@ function funonload() {
 			console.log("error and created" + i);
 		}
 	}
-
 	var check_task = document.querySelectorAll('#check_task');
 	for (let i = 0; i < num; i++) {
 		let display = document.getElementById('li' + i);
-		if(localStorage.getItem("display" + i) != "") {
-			display.className = ("" + localStorage.getItem("display" + i));
-			if(localStorage.getItem("display" + i) == "checked" || localStorage.getItem("display" + i) == "null checked") {
-				check_task[i].classList.add("invis");
-			}
+		display.className = ("" + localStorage.getItem("display" + i));
+		if(localStorage.getItem("display" + i) == "checked" || localStorage.getItem("display" + i) == "null checked") {
+			check_task[i].classList.add("invis");
 		}
 	}
-
-	let element = document.querySelectorAll('li');
-	for (let i = 0; i < element.length; i++) {
-		console.log("Label: " + localStorage.getItem("" + i));
-		console.log("Time: " + localStorage.getItem("time" + i));
-		console.log("Display: " + localStorage.getItem("display" + i));
-		console.log("");
-	}
-	console.log("Num: " + localStorage.getItem("num"));
 }
 
 window.onload = funonload;
@@ -56,13 +43,7 @@ function Storage() {
 		localStorage.setItem("time" + i, "" + document.getElementById('time' + i).innerHTML);
 		localStorage.setItem("display" + i, "" + document.getElementById('li' + i).classList);
 		localStorage.setItem("num", "" + (i+1));
-
-		console.log("Label: " + localStorage.getItem("" + i));
-		console.log("Time: " + localStorage.getItem("time" + i));
-		console.log("Display: " + localStorage.getItem("display" + i));
-		console.log("");
 	}
-	console.log("Num: " + localStorage.getItem("num"));
 }
 
 function Storage_remove() {
@@ -103,7 +84,7 @@ function Checkbox_check() {
 	for (let i = 0; i < button.length; i++) {
 		button[i].addEventListener('click', () => {
 			button[i].classList.add("invis");
-			document.getElementById("li" + i).classList.add("checked");
+			document.getElementById("li" + i).className = "checked";
 			Mas_li[n] = i;
 			n++;
 			Storage();
@@ -242,7 +223,7 @@ function sortElements() {
 		output_text.value = "Finished tasks first";
 		toggle++;
 		for (let i = 0; i < Mas_li.length; i++) {
-			console.log("Cукааа: " + Mas_li[i]);
+			console.log("Щось: " + Mas_li[i]);
 			/*let li = document.getElementById("li" + Mas_li[i]);
 			let li_new = document.createElement("li");
 			li_new.id = li.id;
