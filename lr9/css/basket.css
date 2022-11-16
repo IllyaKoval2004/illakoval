@@ -4,12 +4,6 @@ body {
 	background-size: 1200px;
 }
 
-a {
-	text-decoration: none;
-	padding: 0;
-	margin: 0;
-}
-
 h1 {
 	font-size: 28px;
 	font-weight: bold;
@@ -212,7 +206,7 @@ li {
 	font-size: 16px;
 	transition: all 1s;
 	margin: 40px;
-	padding: 5px;
+	padding: 20px;
 }
 
 .back {
