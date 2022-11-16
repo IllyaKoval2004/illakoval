@@ -72,6 +72,7 @@ back.addEventListener('click', () => {
 });
 
 to_basket.addEventListener('click', () => {
+    popup3.style.display = "none";
     document.location='basket.html' + loc;
 });
 
