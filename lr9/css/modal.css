@@ -127,6 +127,7 @@
 	transition: all 1s;
 	margin: 40px;
 	padding: 20px;
+	margin-bottom: 10px;
 }
 
 .back {
@@ -155,4 +156,16 @@
 	color: blue;
 	background-color: azure;
 	border: 1px solid black;
+}
+
+.image-popup-3 {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	height: 300px;
+	width: 600px;
+	background-image: url(../image/meme-stocks.jpg);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: 600px;
 }
