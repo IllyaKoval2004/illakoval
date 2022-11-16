@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Продаж товарів</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="image/icons8-grocery-store-32.png">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title-block">ОБОВ'ЯЗКОВО ДОДАЙТЕ СВОЄ ЗАМОВЛЕННЯ</div>
+        </div>
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="sticker sticker_new">НОВИНКА</div>
+                <div class="category"><div class="category-text"><a href="https://www.apple.com/ua/">Apple</a></div></div>
+                <div class="img one"></div>
+                <div class="name"><a href="https://rozetka.com.ua/ua/apple_macbook_pro_16_m1_max_1tb_2021_space_gray/p322714708/">MacBook Pro M1 Max <br> 2021</a></div>
+                <div class="price"></div>
+                <button class="buy none">НЕЗАБАРОМ У<br />ПРОДАЖІ</button>
+            </div>
+            <div class="content">
+                <div class="category"><div class="category-text"><a href="">Acer</a></div></div>
+                <div class="img two"></div>
+                <div class="name"><a href="">Aspire 5</a></div>
+                <div class="price">
+                <div class="price"><span class="sale">29 999 грн.</span><span class="bold">26 999</span>грн.</div>
+                </div>
+                <button id="buy" class="buy now">У КОРЗИНУ</button>
+            </div>
+            <div class="content">
+                <div class="sticker sticker_hit">ХІТ<br />ПРОДАЖ</div>
+                <div class="category"><div class="category-text"><a href="">ASUS</a></div></div>
+                <div class="img tree"></div>
+                <div class="name"><a href="https://rozetka.com.ua/ua/asus-90nr03u2-m006f0/p353742207/">TUF Gaming F15</a></div>
+                <div class="price"><span class="bold">36 000</span>грн.</div>
+                <button id="buy" class="buy now">У КОРЗИНУ</button>
+            </div>
+            <div class="content">
+                <div class="sticker sticker_hit">ХІТ<br />ПРОДАЖ</div>
+                <div class="category"><div class="category-text"><a href="">Lenovo</a></div></div>
+                <div class="img four"></div>
+                <div class="name"><a href="">IdeaPad 3 15ALC6</a></div>
+                <div class="price"><span class="bold">27 999</span>грн.</div>
+                <button id="buy" class="buy now">У КОРЗИНУ</button>
+            </div>
+            <div class="content">
+                <div class="category"><div class="category-text"><a href="">Dell</a></div></div>
+                <div class="img five"></div>
+                <div class="name"><a href="">Vostro 5410</a></div>
+                <div class="price"><span class="bold">41 109</span>грн.</div>
+                <button id="buy" class="buy now">У КОРЗИНУ</button>
+            </div>
+            <div class="content">
+                <div class="sticker sticker_hit">ХІТ<br />ПРОДАЖ</div>
+                <div class="category"><div class="category-text"><a href="">HP</a></div></div>
+                <div class="img six"></div>
+                <div class="name"><a href="">245 G8</a></div>
+                <div class="price"><span class="sale">29 999 грн.</span><span class="bold">27 999</span>грн.</div>
+                <button id="buy" class="buy now">У КОРЗИНУ</button>
+            </div>
+            <div class="content">
+                <div class="sticker sticker_new">НОВИНКА</div>
+                <div class="category"><div class="category-text"><a href="">Samsung</a></div></div>
+                <div class="img seven"></div>
+                <div class="name"><a href="">Galaxy Book2 Pro 360</a></div>
+                <div class="price"><span class="bold">84 999</span>грн.</div>
+                <button id="buy" class="buy now">У КОРЗИНУ</button>
+            </div>
+            <div class="content">
+                <div class="sticker sticker_hit">ХІТ<br />ПРОДАЖ</div>
+                <div class="category"><div class="category-text"><a href="">MSI</a></div></div>
+                <div class="img eight"></div>
+                <div class="name"><a href="">Katana GF66</a></div>
+                <div class="price"><span class="bold">54 999</span>грн.</div>
+                <button id="buy" class="buy now">У КОРЗИНУ</button>
+            </div>
+            <button id="arrow-left" class="arrow left">&lt;</button>
+            <button id="arrow-right" class="arrow right">&gt;</button>
+        </div>
+        <button id="basket" class="basket"></button>
+        <div class="basket-count"><span id="basket-count" class="text-basket-count">0</div>
+    </div>
+
+    
+    <div id="popup" class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <div class="popup_close">&times;</div>
+                <div class="logo-popup-1"></div>
+                <div class="popup_title">Корзина пуста</div>
+                <div class="image-popup-1"></div>
+                <div class="popup_text">Добавте будь який товар у корзину будь ласка</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="popup2" class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <div class="popup_close popup_close-2">&times;</div>
+                <div class="popup_title popup_title-2">Чудовий вибір :)</div>
+                <div class="flex">
+                    <div class="popup_text popup_text-2">Вкажіть кількість:</div>
+                    <input class="input-count" type="number" value="1">
+                </div>
+                <button id="last" class="buy now last">Добавити у корзину</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script language="JavaScript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="32x32" rel="icon" href="image/basket.png">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/basket.css" />
+    <title>Корзина</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1><div class="logo"></div>Корзина</h1>
+        <h2>Ви обрали:</h2>
+        <ul id="ul">
+            <li class="header">
+                <div class="cell" style="padding-left: 32px;">№</div>
+                <div class="cell" style="padding-left: 70px;">Просто фотка</div>
+                <div class="cell" style="padding-left: 110px;">Назва товару</div>
+                <div class="cell" style="padding-left: 110px;">Ціна за од.</div>
+                <div class="cell" style="padding-left: 100px;">Кількість</div>
+                <div class="cell" style="padding-left: 110px;">Сума</div>
+            </li>
+        </ul>
+        <label class="totaliti">Разом до сплати:</label><input id="totaliti" type="text" value="0" readonly>
+        <div class="flex">
+            <a class="btn back" href="index.html">Повернутися до покупок</a>
+            <a class="btn buy" href="#">Перейти до оплати</a>
+        </div>
+    </div>
+    <script language="JavaScript" src="js/basket.js"></script>
+</body>
+</html>
