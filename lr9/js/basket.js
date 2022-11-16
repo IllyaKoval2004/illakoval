@@ -7,6 +7,8 @@ let price = document.querySelectorAll('.price');
 let counter = document.querySelectorAll('.counter');
 let totaliti = document.querySelector('#totaliti');
 
+let close_checker = 0;
+
 function Amendments() {
     let help = 0;
     let ii = 0
@@ -31,6 +33,8 @@ function Functional() {
                 let div = span.parentElement;
                 let li = div.parentElement;
                 number[i].innerHTML = "0";
+                back.removeEventListener('click', Back1);
+                back.addEventListener('click', Back2);
                 li.style.display = "none";
                 Amendments();	
             }
@@ -142,3 +146,15 @@ function Create(i) {
 
 Amendments();
 Functional();
+
+let back = document.querySelector('.back');
+
+back.addEventListener('click', Back1);
+
+function Back1() {
+    history.back();
+}
+
+function Back2() {
+    document.location='index.html';
+}

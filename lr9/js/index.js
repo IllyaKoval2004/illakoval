@@ -33,6 +33,10 @@ const popup2 = document.querySelector('#popup2');
 const close_popup2 = document.querySelector('.popup_close-2');
 const last_btn = document.querySelector('#last');
 const inp_count = document.querySelector('.input-count');
+const popup3 = document.querySelector('#popup3');
+const close_popup3 = document.querySelector('#popup_close-3');
+const to_basket = document.querySelector('.to-basket ');
+const back = document.querySelector('.back');
 let loc = "?aloha=0";
 let g = 0;
 
@@ -59,7 +63,20 @@ last_btn.addEventListener('click', () => {
     button[g].addEventListener('click', () => {
         popup2.style.display = "none";
     });
+    popup3.style.display = "block";
     span.innerHTML = "" + n;
+});
+
+back.addEventListener('click', () => {
+    popup3.style.display = "none";
+});
+
+to_basket.addEventListener('click', () => {
+    document.location='basket.html' + loc;
+});
+
+close_popup3.addEventListener('click', () => {
+    popup3.style.display = "none";
 });
 /* ---------- Кінець наповнення корзини -------------------- */
 
