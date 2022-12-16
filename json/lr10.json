@@ -1,0 +1,12 @@
+{
+	"goods": [
+		{
+			"manufacturer": "Apple (test)",
+			"name": "MacBook Pro M1 Max 2021 (test)",
+			"selling": "false",
+			"price": 0,
+			"discount": 0,
+			"sticker": "new"
+		}
+	]
+}
